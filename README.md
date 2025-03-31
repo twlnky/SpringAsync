@@ -1,23 +1,42 @@
-Test:
-Сгенерирован email: marcus.okon@hotmail.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@5e5073ab
-Письмо с подтверждением регистрации отправлено
-Письмо с подтверждением регистрации отправлено
-Письмо с подтверждением регистрации отправлено
-Сгенерирован email: lincoln.wiza@gmail.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@5e5073ab
-Total time: 4005
+# Результаты тестирования асинхронной обработки регистраций
 
-Run
-Сгенерирован email: angel.hills@yahoo.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0
-Сгенерирован email: bryant.hudson@hotmail.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0
-Сгенерирован email: charlotte.swaniawski@gmail.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0
-Сгенерирован email: dudley.beahan@yahoo.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0
-Сгенерирован email: glady.little@yahoo.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0
-Сгенерирован email: elicia.kirlin@hotmail.com
-Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0
+## Тестовый прогон
+
+**Сгенерированные email:**
+
+marcus.okon@hotmail.com
+
+lincoln.wiza@gmail.com
+
+
+
+**Логи сервиса регистрации:**
+```log
+Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@5e5073ab
+Письмо с подтверждением регистрации отправлено [повтор x3]
+Основной запуск
+Сгенерированные email:
+
+
+angel.hills@yahoo.com
+bryant.hudson@hotmail.com
+charlotte.swaniawski@gmail.com
+dudley.beahan@yahoo.com
+glady.little@yahoo.com
+elicia.kirlin@hotmail.com
+Логи сервиса регистрации:
+
+log
+Получено письмо регистрации пользователя - rut.miit.tech.springasync.service.UserRegistrationService@393881f0 [повтор x6]
+Производительность
+⏱ Общее время выполнения: 4005 ms
+Обработано 8 email-адресов в двух запусках
+
+
+
+### Особенности реализации:
+- Иерархическая структура с разделением на тестовый/боевой режимы
+- Группировка однотипных событий в компактной форме
+- Подсветка технических деталей (хеши объектов сервиса)
+- Чёткая визуализация временных характеристик
+- Семантическое форматирование для технической документации
